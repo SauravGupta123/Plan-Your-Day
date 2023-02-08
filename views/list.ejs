@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+   <!-- <% if ( title ==="about") { %>
+        <%- include('about'); -%>
+ <% } %> -->
+
+
+
+
+  <div class="box" id="heading">
+
+      <h1> <%= title %>  </h1>
+      
+    </div>
+
+    <div class="box">
+
+        <% for(let i=0; i<addTask.length; i++){ %>  
+            <div class="item">
+            <input type="checkbox"> 
+            <p>  <%= addTask[i] %> </p>      <!-- the entire array is rendered everysingle time so that the new list item can be added. if we write code to render only latest element then our list can't be updated -->
+
+            </div>
+           
+          <% } %>
+      
+          <form action="/" method="post">
+              <input type="text" name="newTask" placeholder="Add task"   required autocomplete="off">
+              <button type="submit" name="reqFrom" value=<%= title %> >+</button>                <!-- if submit button is pressed from main page then the today's date is passed in value and 
+                                                                                                 if submit button is pressed form work route it will pass work as the value -->
+          </form>
+    </div>
+
+
+    
+
+
+
+
+
+
+</body>
+
+</html>
