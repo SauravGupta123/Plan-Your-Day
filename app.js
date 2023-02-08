@@ -70,7 +70,7 @@ app.post('/work',function(req,res){
 
 app.get("/about",function(req,res){
 
-  res.render('list',{title: "about", addTask: workItems });
+  res.render('about');
 })
 
 
