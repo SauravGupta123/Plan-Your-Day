@@ -15,18 +15,13 @@ let workItems=[];
 
 let currDate= new Date();
 
-var options = { 
-    weekday: 'long',
-     year: 'numeric', 
-     month: 'long', 
-     day: 'numeric' 
-    };
 
 
 
 currDate= currDate.toLocaleDateString("en-US", options);
 
 app.get('/', (req, res) => {
+  let currDate= date.getday();
   res.render('list', {title: currDate, addTask:items});
   
   
