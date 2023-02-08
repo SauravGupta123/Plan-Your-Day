@@ -4,7 +4,7 @@ function getday(){
 var options = { 
     weekday: 'long',
     year: 'numeric', 
-    month: 'long', 
+    month: 'short', 
     day: 'numeric' 
 };
 

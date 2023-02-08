@@ -26,7 +26,7 @@ var options = {
 
 
 app.get('/', (req, res) => {
-  let currDate= date.today;
+  let currDate= date.getday();
   res.render('list', {title: currDate, addTask:items});
   
   
