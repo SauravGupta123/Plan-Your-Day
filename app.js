@@ -2,6 +2,7 @@ const express= require('express');
 const bodyParser= require('body-parser');
 let ejs = require('ejs');
 const app=express();
+const date= require(__dirname+"/views/date.js");
 // const fs = require("fs");
 app.set('view engine', 'ejs');
 
@@ -13,15 +14,19 @@ let workItems=[];
 
 
 
-let currDate= new Date();
+
+var options = { 
+    weekday: 'long',
+     year: 'numeric', 
+     month: 'long', 
+     day: 'numeric' 
+    };
 
 
 
-
-currDate= currDate.toLocaleDateString("en-US", options);
 
 app.get('/', (req, res) => {
-  let currDate= date.getday();
+  let currDate= date.today;
   res.render('list', {title: currDate, addTask:items});
   
   
