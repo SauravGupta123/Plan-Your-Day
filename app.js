@@ -15,13 +15,11 @@ app.use( bodyParser.urlencoded({ extended: true }));
 const items=[];
 const workItems=[];
 
-console.log(date);
-console.log(typeof(date));
 
 
 //homepage
 app.get('/', (req, res) => {
-  const today= date.getday();
+  const today= date.getFulldate();
   console.log(today);
   res.render('list', {title: today, addTask:items});
   
