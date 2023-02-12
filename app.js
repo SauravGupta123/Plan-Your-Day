@@ -20,7 +20,6 @@ const workItems=[];
 //homepage
 app.get('/', (req, res) => {
   const today= date.getFulldate();
-  console.log(today);
   res.render('list', {title: today, addTask:items});
   
   
@@ -35,9 +34,7 @@ app.post('/',(req,res)=>{
     }
     else{
 
-      items.push(req.body.newTask);     //new task is added to the items array
-      
-      
+      items.push(req.body.newTask);     //new task is added to the items array  
       res.redirect('/');     // the page is redirected to homepage and new item is rendered automatically
     }
 
