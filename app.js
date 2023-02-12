@@ -14,7 +14,7 @@ app.use( bodyParser.urlencoded({ extended: true }));
 //variable declaration
 const items=[];
 const workItems=[];
-;
+
 
 
 //homepage
